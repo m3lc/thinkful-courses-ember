@@ -20,12 +20,41 @@
 
             <div class="container">
                 <h2>Ember - App1</h2>
-                {{outlet}}
+                <div class="row">
+                    <div class="col-md-3">
+
+                        {{!outlet "menu"}}
+                        {{!render "menu"}}
+                        {{!partial "menu"}}
+                        {{list-menu menuItems=model}}
+
+                    </div>
+                    <div class="col-md-9">
+                        {{outlet}}
+                    </div>
+                </div>
             </div>
 
         </script>
+        <!--<script type="text/x-handlebars" id="menu">-->
+        <script type="text/x-handlebars" id="components/list-menu">
+            <div class="list-group">
+                    {{#each menuItems as |menu|}}
+                      <div class="list-group-item">
+                                <a href={{menu.url}}>{{menu.name}}</a>
+                            </div>
+                    {{/each}}
+            </div>
+        </script>
         <script type="text/x-handlebars" id="index">
-                <h3>Index</h3>
+                <h3>Welcome!</h3>
+        </script>
+        <script type="text/x-handlebars" id="about">
+                <h3>About</h3>
+                <p>This is ember app1.</p>
+        </script>
+        <script type="text/x-handlebars" id="images">
+                <h3>Images</h3>
         </script>
     </body>
 </html>

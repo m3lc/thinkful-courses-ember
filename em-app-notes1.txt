@@ -6,5 +6,18 @@
 6. Mention the implicit creation of index for every route.
 
 - implicit creation of routes and binding with templates
+10m
 
+7. Plan to create a sidebar as a menu and main content for the application.
+8. Create a static menu inside the application template (.list-group , .list-group-item).
+9. Add routes in App.Router, mention the deprecation of resources (use this.route('top-level-route', {resetNamespace: true});).
+10. Replace the static menu with a template and use named outlets by overriding the ApplicationRoute.
+11. Comment out the ApplicationRoute and use the render hbs helper.
+12. Comment out the render helper and user the partial hbs helper.
+13. Partial is reusable but component can be backed up with its generic component class. Comment out the partial helper and use a component. Create tmpl and use it.
+14. Make the menu dynamic by creating model function in ApplicationRoute.
+15. Modify component to accept the model as parameter.
+
+- common hbs helpers and component with implicit creation of class, model in routers to supply the template with data
+20m
 
