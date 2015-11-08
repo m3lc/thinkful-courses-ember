@@ -1,0 +1,45 @@
+# A.Session 1
+1. Introduction - What is Ember
+Explain we are going to work with the slides and the code.
+Indicate the place that the slides and the code are available.
+No time will be spent on "What is Ember".
+
+2. Why Ember
+Talk about the merits of emberjs.
+
+3. Ember Application Core Concepts
+Show the core concepts that constitute the ember app ecosystem.
+Show changes between v1 and v2.
+
+4. Exploring the Object Model
+Start coding with the Object class, without starting an ember app, to understand the features of the core class.
+
+5. Build App1 - Preview Images
+Install ember inspector.
+Create an ember app, without ember cli, to understand how all classes are associated to each other.
+This app will display categorized images that have a caption and description.
+The img sources will be from http://lorempixel.com/.
+Focus on routing and query params, model preparation (not em-data yet), component communication and event bubbling, dependency injection with initializers.
+
+
+# B.Session 2
+6. Working with Ember CLI
+Install ember cli create an app and transfer the code of App1.
+
+7. Build App2 - Submit Form
+Create with ember a user registration form.
+End up with a reusable form component.
+
+
+# C.Session 3
+8. Build App3 - CRUD View
+Prepare model that returns many records of users and display on a table. 
+Add CRUD actions that use as form the one created in App2.
+End up with a reusable browse table records component.
+
+9. Discussion
+How to approach design and implementation of a project with ember, based on my own experience.
+e.g. ->each use case/screen corresponds aproximately to one main route (possibly with child routes) -> define routes -
+> create empty templates -> prepare model data required -> place data on template -> modify model accordingly eg calculated props -
+> break template into components -> add props that don't belong to child comps, in controller/routable component -
+> add data related funcs in dao service and implement if required specific adapters and serializers -> add data related calls in routes
