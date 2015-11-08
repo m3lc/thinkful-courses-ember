@@ -22,7 +22,9 @@
 20m
 
 
-14. Replace the model with a deferred promise, that takes a while.
-15. Modify template to show caption "loading....", a spinner could have been used. Needs to populate model in setupController and modify template.
+16. Replace the model with a deferred promise, that takes a while.
+17. Modify template to show caption "loading....", a spinner could have been used. Needs to populate model in setupController and modify template.
 - model of routes uses promises, loading event fired on the closest route, if don't want to block can move logic elsewhere in the flow i.e. setupController
 15m
+
+
