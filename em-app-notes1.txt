@@ -1,1 +1,10 @@
 1. Create initial simple project structure, no ember-cli.
+2. Create application; nothing is shown.
+3. Create app template; the template is shown.
+4. Add outlet.
+5. Create the index template; the index template is shown at the outlet.
+6. Mention the implicit creation of index for every route.
+
+- implicit creation of routes and binding with templates
+
+

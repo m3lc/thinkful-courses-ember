@@ -9,12 +9,23 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
-
         <script src="js/libs/jquery-1.11.3.min.js"></script>
         <script src="js/libs/ember-template-compiler.js"></script>
         <script src="js/libs/ember.debug.js"></script>
         <script src="js/libs/ember-data.js"></script>
         <script src="js/app.js"></script>
 
+
+        <script type="text/x-handlebars">
+
+            <div class="container">
+                <h2>Ember - App1</h2>
+                {{outlet}}
+            </div>
+
+        </script>
+        <script type="text/x-handlebars" id="index">
+                <h3>Index</h3>
+        </script>
     </body>
 </html>
