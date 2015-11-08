@@ -1,0 +1,20 @@
+<div class="container">
+<h2>Ember - App1</h2>
+	{{#if model}}
+		<div class="row">
+		    <div class="col-md-3">
+
+		        {{!outlet "menu"}}
+		        {{!render "menu"}}
+		        {{!partial "menu"}}
+		        {{list-menu menuItems=model}}
+
+		    </div>
+		    <div class="col-md-9">
+		        {{outlet}}
+		    </div>
+		</div>
+	{{else}}
+		<b>Loading Application....</b>
+	{{/if}}
+</div>

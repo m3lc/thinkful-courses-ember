@@ -1,0 +1,11 @@
+1. Install node, npm, bower and ember-cli.
+2. Set up pods prefix and modify location to hash in environment. Also add in .jshintrc Em and $ under predef and add contentSecurityPolicy.
+3. Create a project "ember new em-app1-cli" to migrate em-app1 in ember-cli.
+4. Generate each of the classes and templates inside the ember-cli.
+- copy routes
+- generate templates
+- generate routes
+- generate components
+- generate controllers
+5. Add in vendor bootstrap files. bower install --save bootstrap and add imports in ember-cli-build.js
+6. upgrade ember to v2.1 in ember-cli.

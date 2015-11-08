@@ -1,0 +1,9 @@
+<h3>Images</h3>
+<div>Description Filter: {{input value=filter}}</div>
+<div class="row">
+{{#each filteredModel as |image|}}
+    <div class="col-xs-3">{{#link-to "images.image" image.id}}<img src={{image.src}} style="width:100px;margin:10px;">{{/link-to}}</div>
+{{/each}}
+</div>
+<hr>
+{{outlet}} 

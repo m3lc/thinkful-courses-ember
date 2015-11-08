@@ -1,0 +1,56 @@
+1. Create initial simple project structure, no ember-cli.
+2. Create application; nothing is shown.
+3. Create app template; the template is shown.
+4. Add outlet.
+5. Create the index template; the index template is shown at the outlet.
+6. Mention the implicit creation of index for every route.
+
+- implicit creation of routes and binding with templates
+
+
+7. Plan to create a sidebar as a menu and main content for the application.
+8. Create a static menu inside the application template (.list-group , .list-group-item).
+9. Add routes in App.Router, mention the deprecation of resources (use this.route('top-level-route', {resetNamespace: true});).
+10. Replace the static menu with a template and use named outlets by overriding the ApplicationRoute.
+11. Comment out the ApplicationRoute and use the render hbs helper.
+12. Comment out the render helper and user the partial hbs helper.
+13. Partial is reusable but component can be backed up with its generic component class. Comment out the partial helper and use a component. Create tmpl and use it.
+14. Make the menu dynamic by creating model function in ApplicationRoute.
+15. Modify component to accept the model as parameter.
+
+- common hbs helpers and component with implicit creation of class, model in routers to supply the template with data
+
+
+16. Replace the model with a deferred promise, that takes a while.
+17. Modify template to show caption "loading....", a spinner could have been used. Needs to populate model in setupController and modify template.
+
+- model of routes uses promises, loading event fired on the closest route, if don't want to block can move logic elsewhere in the flow i.e. setupController
+
+
+18. Get images from lorempixel by using deferred with delay in order to show the loading template.
+19. Show the implicit creation of all routes if empty function is added in route.
+20. Plan to show image by creating the route first and make the url work and then add events.
+21. “If your user interface is nested, your routes should be nested” – Yehuda Katz
+22. Add image route, template and outlet in parent route. Also added calculated property to format date created. Use link-to with and without id, to show passing through the mode always and not passing respectively.
+
+- first created the url->route then events, showed implicit creation of sub routes
+
+
+23. Use didInsertElement event to modify the DOM of Image in Image component.
+24. Use afterRender to modify the DOM of Image in Images component. **** move this to session2!!
+i.e.
+Ember.View.reopen({
+  didInsertElement : function(){
+    this._super();
+    Ember.run.scheduleOnce('afterRender', this, this.afterRenderEvent);
+  },
+  afterRenderEvent : function(){
+    // implement this hook in your own subclasses and run your jQuery logic there
+  }
+});
+
+25. Add query parameters related to filtering. Add a field and filter based on description.
+26. Modify the routes to change how the image is presented. Change template and controller with index.
+27. Show classNames, classNameBindings and attributeBindings.
+
+- showed proper approach of modifying the DOM, showed query parameters and changed presentation with the route/subroute - templates relationship
