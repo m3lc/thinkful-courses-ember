@@ -20,6 +20,7 @@
 
             <div class="container">
                 <h2>Ember - App1</h2>
+                {{#if model}}
                 <div class="row">
                     <div class="col-md-3">
 
@@ -33,8 +34,14 @@
                         {{outlet}}
                     </div>
                 </div>
+                {{else}}
+                <b>Loading Application....</b>
+                {{/if}}
             </div>
 
+        </script>
+        <script type="text/x-handlebars" id="loading">
+            <b>Loading....</b>
         </script>
         <!--<script type="text/x-handlebars" id="menu">-->
         <script type="text/x-handlebars" id="components/list-menu">
