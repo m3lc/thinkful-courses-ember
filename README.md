@@ -1,2 +1,2 @@
 # thinkful-courses-ember
-Thinkful courses using ember.js framework.
+Thinkful courses on ember.js framework.
