@@ -27,7 +27,7 @@
 18. Add a DS.attr() for property leading to deep object graph not required for modeling.
 19. Create a model and turn it into a plain object, it can be done. Add code in integration service.
 20. Set expressjs (ember g http-mock user) and restart server.
-21. Add some mock data in server/mocks/user.js .
+21. Add some mock data in server/mocks/user.js . Add body-parser module for expressjs.
 
 
 - Additional ember-cli exercise, installed bootstrap and sass, created a facade service, overriden default behaviour with app adapter and serializer, used specific adapter for user, mock service with expressjs of ember-cli
