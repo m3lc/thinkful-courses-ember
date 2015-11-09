@@ -1,22 +1,23 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-	fields:[{
+	fields:[
+	{
 		name:"username",
 		type:"text",
 		caption:"Username",
 		placeholder:"Enter a username",
 		isRequired: true,
 		validations:[
-		{
+		/*{
 			message:"too small",
 			validate:function(value,formField){
 				return value.length>3;
 			}
-		},{
+		},*/{
 			message:"too big",
 			validate:function(value,formField){
-				return value.length<10;
+				return Em.isEmpty(value)||value.length<10;
 			}
 		}
 		],
@@ -39,6 +40,12 @@ export default Ember.Controller.extend({
 		type:"text",
 		caption:"Last Name",
 		placeholder:"Enter your last name"
+	},
+	{
+		name:"password2",
+		type:"password",
+		caption:"Password",
+		placeholder:"Repeat password"
 	}
 	]
 });

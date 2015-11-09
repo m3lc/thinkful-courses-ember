@@ -1,0 +1,7 @@
+.form-field{
+	&.is-required{
+		.caption{
+			color:red;
+		}
+	}
+}

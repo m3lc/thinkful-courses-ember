@@ -8,9 +8,18 @@ export default Ember.Route.extend({
 		// 	return {};
 		// }
 	},
+	validateRecord(record){
+		return Em.isEmpty(record.get("password"))||record.get("password")===record.get("password2");
+	},
 	actions:{
-		saveAction(record){
-			this.get("integration").saveRecord("user",record);
+		saveAction(record,success,fail){
+			var result = this.validateRecord(record);
+			if(!result){
+				fail("password don't match");
+			}else{
+				success();
+				this.get("integration").saveRecord("user",record);
+			}
 		}
 	}
 });

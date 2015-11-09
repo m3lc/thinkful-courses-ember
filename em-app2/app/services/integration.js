@@ -39,6 +39,10 @@ export default Ember.Service.extend({
         }
     },
     isDSModel(modelName, record) {
-        return this.get("store").hasRecordForId(modelName, Em.get(record, "id"));
+        if(Em.get(record,"isNew")){
+            return record.save && Em.inspect(record).indexOf("model:"+modelName)!==-1;
+        }else{
+            return this.get("store").hasRecordForId(modelName, Em.get(record, "id"));
+        }
     }
 });

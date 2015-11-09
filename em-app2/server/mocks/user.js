@@ -16,7 +16,7 @@ module.exports = function(app) {
   });
 
   usersRouter.post('/', function(req, res) {
-    res.status(201).end();
+    res.status(201).send("{}").end();
   });
 
   usersRouter.get('/:id', function(req, res) {

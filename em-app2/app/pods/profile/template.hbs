@@ -2,14 +2,15 @@
 <div class="panel panel-default">
 	<div class="panel-body">
 	 
-		{{#edit-form formData=model fields=fields commitAction="saveAction" as |fieldsData modelData errors| }}
+		{{#edit-form formData=model fields=fields commitAction="saveAction" as |fieldsData modelData | }}
 			<div class="row">
-				<div class="col-xs-6">{{form-field field=fieldsData.[0] data=modelData errors=errors}}</div>
-				<div class="col-xs-6">{{form-field field=fieldsData.[1] data=modelData errors=errors}}</div>
+				<div class="col-xs-12">{{form-field field=fieldsData.username data=modelData }}</div>
+				<div class="col-xs-6">{{form-field field=fieldsData.password data=modelData }}</div>
+				<div class="col-xs-6">{{form-field field=fieldsData.password2 data=modelData }}</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-6">{{form-field field=fieldsData.[2] data=modelData errors=errors}}</div>
-				<div class="col-xs-6">{{form-field field=fieldsData.[3] data=modelData errors=errors}}</div>
+				<div class="col-xs-6">{{form-field field=fieldsData.firstName data=modelData }}</div>
+				<div class="col-xs-6">{{form-field field=fieldsData.lastName data=modelData }}</div>
 			</div>
 		{{/edit-form}}
 		

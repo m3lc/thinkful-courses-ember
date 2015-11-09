@@ -10,20 +10,17 @@
 
 {{#if hasBlock}}
 
-	{{yield fields formData errors}}
+	{{yield fieldsFor formData}}
 
 {{else}}
 
   {{#each fields as |field|}}
-    {{form-field field=field data=formData errors=errors}}
+    {{form-field field=field data=formData}}
   {{/each}}
 
 {{/if}}
 
 <button class="btn btn-danger" {{action "cancelAction"}} >{{cancelButtonCaption}}</button>
-{{#if errors}}
-<button class="btn btn-success" disabled>{{submitButtonCaption}}</button>
-{{else}}
 <button type="submit" class="btn btn-success" {{action "submitAction"}} >{{submitButtonCaption}}</button>
-{{/if}}
+
 </form>
