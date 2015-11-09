@@ -1,6 +1,6 @@
 1. Install node, npm, bower and ember-cli.
 2. Create a project "ember new em-app1-cli" to migrate em-app1 in ember-cli.
-3. Set up pods prefix (podModulePrefix) and modify location to hash in environment. Also add in .jshintrc Em and $ under predef and add contentSecurityPolicy.
+3. Set up pods prefix (podModulePrefix) and modify location to hash in environment. Also add in .jshintrc Em and $ under predef and add contentSecurityPolicy. (in .ember-cli -> "liveReload": false ?)
 4. Generate each of the classes and templates inside the ember-cli.
 - copy routes
 - generate templates
@@ -8,4 +8,41 @@
 - generate components
 - generate controllers
 5. Add in vendor bootstrap files. bower install --save bootstrap and add imports in ember-cli-build.js
-6. upgrade ember to v2.1 in ember-cli.
+6. Upgrade ember to v2.1 in ember-cli.
+
+- Introduction to ember-cli structure and commands, completed migration of the existing project em-app1
+
+
+7. Create em-app2 project and complete configs mentioned in 3.
+8. Delete unnecessary folders (i.e. routes,controllers) and could create a utils folder.
+9. Install bootstrap as in 5.
+10. Add css preprocessor (scss) support (npm install --save broccoli-sass or ember install ember-cli-sass).
+11. Create routes for register user (registrations), edit settings (profile).
+12. Add a simple list menu in application.
+13. Create DAO pattern with a facade service (integration) and inject it to all routes from initializer (integration).
+14. Create application adapter and serializer.
+15. Explain how this pattern works.
+16. Override adapter to create mock data for findAll and findRecord. This could also have been a custom ajax call. Show structure of expected data.
+17. Create user adapter and move mock data there.
+18. Add a DS.attr() for property leading to deep object graph not required for modeling.
+19. Create a model and turn it into a plain object, it can be done. Add code in integration service.
+20. Set expressjs (ember g http-mock user) and restart server.
+21. Add some mock data in server/mocks/user.js .
+
+
+- Additional ember-cli exercise, installed bootstrap and sass, created a facade service, overriden default behaviour with app adapter and serializer, used specific adapter for user, mock service with expressjs of ember-cli
+
+
+23. Add one more profile route mapping id param, it has to be first since the last one takes precedence in link-to helper and transition. Alternatively create second route that redirects to this one.
+24. Create form component to display data in profile. Start with static form and turn it into dynamic.
+25. Make form a modular component that supports block format.
+26. Make fields components as well, supply fields array and a computed prop in each field that will also set the original value. Use block params in block form and yield helper.
+27. Add update action in route.
+28. Reuse the form for registration.
+29. Add insert action in route.
+30. Add required fields.
+31. Add validations in fields.
+32. Add errors in fields.
+
+- Created a reusable form component and show update and create
+

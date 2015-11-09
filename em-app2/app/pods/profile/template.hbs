@@ -1,0 +1,18 @@
+<h2>User Profile</h2>
+<div class="panel panel-default">
+	<div class="panel-body">
+	 
+		{{#edit-form formData=model fields=fields commitAction="saveAction" as |fieldsData modelData errors| }}
+			<div class="row">
+				<div class="col-xs-6">{{form-field field=fieldsData.[0] data=modelData errors=errors}}</div>
+				<div class="col-xs-6">{{form-field field=fieldsData.[1] data=modelData errors=errors}}</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">{{form-field field=fieldsData.[2] data=modelData errors=errors}}</div>
+				<div class="col-xs-6">{{form-field field=fieldsData.[3] data=modelData errors=errors}}</div>
+			</div>
+		{{/edit-form}}
+		
+		{{!edit-form formData=model fields=fields commitAction="saveAction"}}
+	</div>
+</div>

@@ -1,0 +1,13 @@
+html, body{
+    height:100%;
+}
+
+body {
+    background-color:$body-color;
+}
+
+.ember-application > .ember-view,
+.ember-application > .ember-view > .container{
+    height:100%
+}
+
