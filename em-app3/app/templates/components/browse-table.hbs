@@ -1,0 +1,28 @@
+<table class="table table-hover">
+      <thead>
+        <tr>
+          {{#each colContent as |col|}}
+            <th>{{col}}</th>
+          {{/each}}
+        </tr>
+      </thead>
+      <tbody>
+      {{#each content as |row|}}
+      	<tr data-row={{row.id}}>
+          {{#each colContent as |col|}}
+            <td>{{get row col}}</td>
+          {{/each}}
+        </tr>
+      {{/each}}
+      </tbody>
+</table>
+    {{#if hasButtons}}
+      <button class="btn btn-success" {{action "create"}}>create</button>&nbsp;
+      {{#if selectedRow}}
+        <button class="btn btn-warning" {{action "update"}}>update</button>&nbsp;
+        <button class="btn btn-danger" {{action "delete"}}>delete</button>
+      {{else}}
+        <button class="btn btn-warning" disabled >update</button>&nbsp;
+        <button class="btn btn-danger" disabled >delete</button>
+      {{/if}}
+    {{/if}}

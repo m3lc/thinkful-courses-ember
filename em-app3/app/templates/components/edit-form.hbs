@@ -1,0 +1,26 @@
+
+
+{{#each errors as |error|}}
+<div class="alert alert-danger" role="alert">{{error}}</div>
+{{else}}
+{{/each}}
+
+
+<form>
+
+{{#if hasBlock}}
+
+	{{yield fieldsFor formData}}
+
+{{else}}
+
+  {{#each fields as |field|}}
+    {{form-field field=field data=formData}}
+  {{/each}}
+
+{{/if}}
+
+<button class="btn btn-danger" {{action "cancelAction"}} >{{cancelButtonCaption}}</button>
+<button type="submit" class="btn btn-success" {{action "submitAction"}} >{{submitButtonCaption}}</button>
+
+</form>

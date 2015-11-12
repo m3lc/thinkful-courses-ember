@@ -1,0 +1,19 @@
+<h3>Update User</h3>
+<div class="panel panel-default">
+	<div class="panel-body">
+	 
+		{{#edit-form formData=model fields=fields commitAction="saveAction" rollbackAction="cancelAction" as |fieldsData modelData | }}
+			<div class="row">
+				<div class="col-xs-12">{{form-field field=fieldsData.username data=modelData }}</div>
+				<div class="col-xs-6">{{form-field field=fieldsData.password data=modelData }}</div>
+				<div class="col-xs-6">{{form-field field=fieldsData.password2 data=modelData }}</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">{{form-field field=fieldsData.firstName data=modelData }}</div>
+				<div class="col-xs-6">{{form-field field=fieldsData.lastName data=modelData }}</div>
+			</div>
+		{{/edit-form}}
+		
+		{{!edit-form formData=model fields=fields commitAction="saveAction"}}
+	</div>
+</div>
