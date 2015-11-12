@@ -23,7 +23,9 @@ export default Ember.Service.extend({
         }
     },
     deleteRecord(modelName, record) {
-        return this.get("store").createRecord(modelName, record);
+        if (this.isDSModel(modelName, record)) {
+            return record.destroyRecord();
+        }
     },
     updateRecord(modelName, record) {
         if (this.isDSModel(modelName, record)) {

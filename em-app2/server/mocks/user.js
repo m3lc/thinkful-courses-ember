@@ -43,7 +43,9 @@ module.exports = function(app) {
   });
 
   usersRouter.delete('/:id', function(req, res) {
-    res.status(204).end();
+    // res.status(204).end();
+    res.write("204");
+        res.end();
   });
 
 

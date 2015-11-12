@@ -48,7 +48,6 @@ module.exports = function(app) {
         });
     });
     usersRouter.delete('/:id', function(req, res) {
-        console.log("test");
         // res.status(204).end({});
         // res.status("204").end({});
         res.write("204");
