@@ -1,0 +1,25 @@
+1. Create em-app3 project using ember-cli.
+2. Install bootstrap and preprocessors.
+3. Create routes for users, create user, edit user.
+4. Add model for User.
+5. Generate Integration Service facade.
+6. Start expressjs to mock data.
+7. Prepare models for users route.
+
+- Prepare ember-cli environment for web app
+
+
+8. Create table of user records.
+9. Add an input to filter records with anything that the record may contain.
+10. Add selection of record.
+
+- Make table respond to dom events
+
+
+11. Prepare models in create and upate routes.
+12. Add edit form component from em-app2 in the routes to display data and test route data related funcs.
+13. Add delete option and confirmation.
+14. Add delete event.
+15. Turn table into a reusable component.
+
+- Implement the table of records 
